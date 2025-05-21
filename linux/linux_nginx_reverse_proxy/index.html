@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../add_response_headers_in_apache/">
+        <link rel="prev" href="../iptables_installation_and_config/">
       
       
-        <link rel="next" href="../apache_user/">
+        <link rel="next" href="../mariadb_troubleshoot/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Rotate Apache Logs - Monte Jones</title>
+        <title>NGINX reverse proxy - Monte Jones</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rotate-apache-logs" class="md-skip">
+        <a href="#nginx-reverse-proxy" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rotate Apache Logs
+              NGINX reverse proxy
             
           </span>
         </div>
@@ -965,32 +965,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Rotate Apache Logs
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../apache_rotate_logs/" class="md-nav__link">
         
   
   
@@ -1001,62 +979,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-install-apache-httpd" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Install Apache (httpd)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-configure-log-rotation-for-apache" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Configure Log Rotation for Apache
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-test-log-rotation" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Test Log Rotation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-verify-log-rotation" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Verify Log Rotation
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1664,10 +1586,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../linux_nginx_reverse_proxy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    NGINX reverse proxy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1678,6 +1622,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-apache-and-configure-port-8087" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Apache and Configure Port 8087
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-nginx-and-configure-port-8096" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Install Nginx and Configure Port 8096
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-configure-nginx-as-reverse-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configure Nginx as Reverse Proxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-copy-index-file-to-apaches-document-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Copy Index File to Apache’s Document Root
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-start-and-enable-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Start and Enable Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-test-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Test Configuration
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1947,36 +1965,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-install-apache-httpd" class="md-nav__link">
+  <a href="#step-1-install-apache-and-configure-port-8087" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Install Apache (httpd)
+      Step 1: Install Apache and Configure Port 8087
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-configure-log-rotation-for-apache" class="md-nav__link">
+  <a href="#step-2-install-nginx-and-configure-port-8096" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Configure Log Rotation for Apache
+      Step 2: Install Nginx and Configure Port 8096
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-test-log-rotation" class="md-nav__link">
+  <a href="#step-3-configure-nginx-as-reverse-proxy" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Test Log Rotation
+      Step 3: Configure Nginx as Reverse Proxy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-verify-log-rotation" class="md-nav__link">
+  <a href="#step-4-copy-index-file-to-apaches-document-root" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Verify Log Rotation
+      Step 4: Copy Index File to Apache’s Document Root
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-start-and-enable-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Start and Enable Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-test-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Test Configuration
     </span>
   </a>
   
@@ -1998,44 +2034,81 @@
 
 
 
-<h1 id="rotate-apache-logs">Rotate Apache Logs</h1>
-<p>To set up <strong>log rotation</strong> for Apache (<code>httpd</code>) on all app servers in company-name Datacenter, follow these steps:</p>
-<h3 id="1-install-apache-httpd"><strong>1. Install Apache (<code>httpd</code>)</strong></h3>
-<p>Run the following command on each app server:</p>
-<pre><code class="language-bash">sudo yum install httpd -y
-sudo systemctl start httpd
-sudo systemctl enable httpd
+<h1 id="nginx-reverse-proxy">NGINX reverse proxy</h1>
+<p>step-by-step <strong>setup guide</strong> to deploy the front-end application on a server:</p>
+<hr />
+<h3 id="step-1-install-apache-and-configure-port-8087"><strong>Step 1: Install Apache and Configure Port 8087</strong></h3>
+<ol>
+<li><strong>Install Apache:</strong>
+   <code>bash
+   sudo yum install -y httpd</code></li>
+<li><strong>Modify Apache's Port Configuration:</strong><br />
+   Edit the Apache config file:
+   <code>bash
+   sudo nano /etc/httpd/conf/httpd.conf</code>
+   Change the <code>Listen</code> directive:
+   <code>Listen 8087</code></li>
+<li><strong>Restart Apache to Apply Changes:</strong>
+   <code>bash
+   sudo systemctl restart httpd</code></li>
+</ol>
+<hr />
+<h3 id="step-2-install-nginx-and-configure-port-8096"><strong>Step 2: Install Nginx and Configure Port 8096</strong></h3>
+<ol>
+<li><strong>Install Nginx:</strong>
+   <code>bash
+   sudo yum install -y nginx</code></li>
+<li><strong>Modify Nginx Configuration:</strong><br />
+   Edit <code>/etc/nginx/nginx.conf</code>:
+   <code>bash
+   sudo nano /etc/nginx/nginx.conf</code>
+   Set Nginx to listen on port <strong>8096</strong>:
+   <code>server {
+       listen 8096;
+       location / {
+           proxy_pass http://127.0.0.1:8087;
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-IP $remote_addr;
+       }
+   }</code></li>
+<li><strong>Restart Nginx to Apply Changes:</strong>
+   <code>bash
+   sudo systemctl restart nginx</code></li>
+</ol>
+<hr />
+<h3 id="step-3-configure-nginx-as-reverse-proxy"><strong>Step 3: Configure Nginx as Reverse Proxy</strong></h3>
+<ul>
+<li>The <strong>above configuration already sets Nginx</strong> as a reverse proxy by forwarding requests on <strong>8096 → Apache (8087).</strong>  </li>
+<li>Ensure Apache and Nginx are <strong>running correctly</strong> with:
+  <code>bash
+  sudo systemctl status httpd nginx</code></li>
+</ul>
+<hr />
+<h3 id="step-4-copy-index-file-to-apaches-document-root"><strong>Step 4: Copy Index File to Apache’s Document Root</strong></h3>
+<ol>
+<li><strong>Copy the <code>index.html</code> file</strong> from Jump Host:
+   <code>bash
+   scp thor@jump-host:/home/thor/index.html /var/www/html/index.html</code></li>
+<li><strong>Set correct permissions</strong>:
+   <code>bash
+   sudo chmod 644 /var/www/html/index.html
+   sudo chown apache:apache /var/www/html/index.html</code></li>
+</ol>
+<hr />
+<h3 id="step-5-start-and-enable-services"><strong>Step 5: Start and Enable Services</strong></h3>
+<p>Ensure both servers <strong>start on boot</strong>:</p>
+<pre><code class="language-bash">sudo systemctl enable httpd nginx
+sudo systemctl start httpd nginx
 </code></pre>
-<p>This installs and starts Apache, ensuring it runs on boot.</p>
-<h3 id="2-configure-log-rotation-for-apache"><strong>2. Configure Log Rotation for Apache</strong></h3>
-<p>Edit or create a logrotate configuration file for Apache:</p>
-<pre><code class="language-bash">sudo nano /etc/logrotate.d/httpd
-</code></pre>
-<p>Add the following configuration:</p>
-<pre><code class="language-bash">/var/log/httpd/*.log {
-    monthly
-    rotate 3
-    compress
-    missingok
-    notifempty
-    create 0640 root root
-    sharedscripts
-    postrotate
-        systemctl reload httpd &gt; /dev/null 2&gt;&amp;1 || true
-    endscript
-}
-</code></pre>
-<h3 id="3-test-log-rotation"><strong>3. Test Log Rotation</strong></h3>
+<hr />
+<h3 id="step-6-test-configuration"><strong>Step 6: Test Configuration</strong></h3>
 <p>Run:</p>
-<pre><code class="language-bash">sudo logrotate -d /etc/logrotate.d/httpd
+<pre><code class="language-bash">curl http://&lt;BackupServerIP&gt;:8096
 </code></pre>
-<p>This <strong>dry-run</strong> ensures the configuration is correct.</p>
-<h3 id="4-verify-log-rotation"><strong>4. Verify Log Rotation</strong></h3>
-<p>Check rotated logs:</p>
-<pre><code class="language-bash">ls -lh /var/log/httpd/
-</code></pre>
-<p>You should see compressed logs (<code>.gz</code>) with only <strong>3 rotated versions</strong>.</p>
-<p>For more details, check out <a href="https://www.tecmint.com/install-logrotate-to-manage-log-rotation-in-linux/">this guide</a> or <a href="https://stackoverflow.com/questions/44048/best-way-to-rotate-apache-log-files">this discussion</a>. Let me know if you need further customization! 🚀</p>
+<p>If configured correctly, you should see the <strong>index.html content</strong>.</p>
+<hr />
+<p>Your Nautilus Backup Server is now set up with <strong>Apache (8087) behind Nginx (8096) acting as a reverse proxy</strong>. 🚀<br />
+Let me know if you need any refinements!</p>
 
 
 
