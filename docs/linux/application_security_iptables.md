@@ -1,3 +1,4 @@
+# configure iptables
 To configure **iptables** on the Nautilus backup server to allow incoming connections to **Nginx (port 8094)** and block incoming connections to **Apache (port 5000)**, follow these steps:
 
 ### **1. Allow Incoming Connections to Nginx (Port 8094)**
