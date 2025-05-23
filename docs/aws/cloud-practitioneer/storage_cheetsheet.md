@@ -63,7 +63,7 @@ Here are the AWS services that relates to storage.:
 
 ---
 
-**4️⃣ Scalable Data Storage 🚀 – Amazon S3**  
+#### **5️⃣ Scalable Data Storage 🚀 – Amazon S3**  
 ✔️ **What it is:** Scalable, secure, cost-effective storage that adapts to business needs.  
 ✔️ **Use cases:** High-growth startups, enterprises managing large datasets.  
 ✔️ **Key features:**  
@@ -74,49 +74,6 @@ Here are the AWS services that relates to storage.:
 🔎 **Study Tip:** Explore **S3 Intelligent-Tiering** and how it **automatically moves data** between storage classes to optimize costs.  
 
 
-### **Amazon File Cache – Study Guide** 🚀  
-
-#### **Overview**  
-Amazon File Cache is a **high-speed, fully managed cache** that accelerates **file-based workloads** by providing quick access to data stored across multiple sources, including **Amazon S3, on-premises storage, and AWS file systems**.  
-
----
-
-### **Key Features**  
-✔️ **High Throughput & Low Latency** → Delivers **sub-millisecond** access for large-scale applications.  
-✔️ **Unified Namespace** → Aggregates multiple data sources into a single view.  
-✔️ **Automatic Caching** → Frequently accessed files are cached for faster retrieval.  
-✔️ **POSIX-Compliant** → Seamlessly integrates with Linux-based applications.  
-✔️ **Scalability** → Dynamically expands to handle growing datasets.  
-
----
-
-### **Use Cases**  
-🔹 **High-Performance Computing (HPC)** → Supports workloads like genomics, seismic analysis, and simulations.  
-🔹 **Machine Learning (ML) Training** → Accelerates large-scale ML projects by providing rapid data access.  
-🔹 **Media & Entertainment** → Speeds up rendering and data processing for visual effects and animations.  
-🔹 **Big Data Analytics** → Enhances performance of data processing pipelines.  
-
----
-
-### **Comparison with Other AWS Storage Services**  
-
-| **Storage Service**       | **Best For** | **Data Retrieval Speed** | **Integration** |
-|--------------------------|-------------|-------------------------|----------------|
-| **Amazon File Cache**    | HPC, ML, media workloads | Sub-millisecond | POSIX-compatible, connects to S3 & FSx |
-| **Amazon S3**            | General object storage | Varies (depends on tier) | Works with many AWS services |
-| **Amazon EFS**           | Shared file storage | Low latency | NFS-based, ideal for Linux apps |
-| **Amazon FSx for Lustre** | High-performance file system | Sub-millisecond | HPC and large-scale file processing |
-
----
-
-### **Study Tips**  
-✅ Learn how to **configure and mount Amazon File Cache** to Linux instances.  
-✅ Understand **performance tuning** to optimize cache speed.  
-✅ Explore **how it integrates with Amazon S3 and FSx** for seamless file access.  
-✅ Review pricing models for **cost-efficient caching solutions**.  
-
-Want me to create **practice questions** for your study? 🚀  
-You can explore more [here](https://aws.amazon.com/filecache/).
 
 
 ---
